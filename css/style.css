@@ -1,0 +1,156 @@
+body {
+  width: 1200px; /* Фиксированная ширина страницы */
+  height: 100%;
+  margin: 0 auto; /* Центрирование содержимого по горизонтали */
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  background-color: rgba(255, 255, 255, 1);
+  font-family: "Ubuntu Mono", monospace, -apple-system, system-ui,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-size: 18px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+  font-size: 22px;
+}
+
+h1 {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-1 {
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 80%; /* ширина колонок */
+}
+
+.column-left {
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  overflow-y: auto;
+  top: 0;
+  background-color: aquamarine;
+  height: 100vh;
+}
+
+.grid-1-col.column-left {
+  position: sticky;
+  display: flex;
+  flex-direction: column; /* Для правильного отображения элементов в столбце */
+  justify-content: flex-start; /* или другое положение по вертикали */
+  align-items: center;
+  z-index: 999;
+  overflow-y: auto;
+  top: 0;
+  background-color: aquamarine;
+  height: 100vh; /* Установите высоту блока на всю высоту экрана */
+}
+
+.logo-container {
+  display: flex;
+  padding: 0 auto;
+  max-width: 80%; /* Максимальная ширина изображения внутри контейнера */
+  max-height: 80%; /* Максимальная высота изображения внутри контейнера */
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container img {
+  max-width: 100%; /* Максимальная ширина изображения внутри контейнера */
+  max-height: 100%; /* Максимальная высота изображения внутри контейнера */
+  width: auto; /* Автоматическая ширина для подстройки под содержимое */
+  height: auto; /* Автоматическая высота для подстройки под содержимое */
+  object-fit: contain; /* Подгоняет изображение внутри контейнера */
+}
+
+.nav-bar {
+  margin: 0 0 90%;
+}
+
+.column-footer {
+  padding-top: 15%;
+  text-align: center;
+  border-top: 1px solid #fff;
+  margin: 0 auto;
+  font-size: 15px;
+}
+
+/*.column-right {
+  /* Стили для правой колонки */
+/* display: flex;
+  justify-content: center; /* Центрирование по горизонтали */
+/*align-items: center; /* Центрирование по вертикали */
+/* Дополнительные стили для родительского контейнера 
+}*/
+
+.grid-1-col {
+  padding: 0;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.page-header {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0px auto;
+  height: 40px;
+  padding: 0;
+  border-bottom: 1px solid #ddd;
+  z-index: 3;
+  top: 0;
+  background-color: #eee;
+}
+
+.header-h {
+  padding: 0 20px;
+  text-align: center;
+}
+
+.search {
+  margin-right: 20px;
+}
+
+input[type="text"] {
+  width: 30%;
+  height: 55%;
+  padding-left: 30px; /* Отступ слева для текста */
+  box-sizing: border-box; /* Чтобы padding учитывался внутри ширины input */
+  background-image: url("путь_к_вашей_иконке_лупы.png"); /* Путь к изображению лупы */
+  background-repeat: no-repeat;
+  background-position: 8px center; /* Позиция иконки лупы */
+  border: 1px solid #ccc; /* Пример рамки */
+  border-radius: 10px; /* Пример закругления углов */
+}
+
+.page-post {
+  /*width: 100%;*/
+  padding: 1em 1em 1em;
+  border-bottom: 1px solid #ddd;
+}
+
+/*.p-relative {
+  position: relative !important;
+} 
+*/
+
+.articles-container {
+}
